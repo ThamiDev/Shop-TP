@@ -11,7 +11,7 @@ const SlideShow = () => {
                 <div className="left-container">
 
                     <div className="number-slide">
-                        01
+                        <h2>01</h2>
                     </div>
                     <div className="picture-slide">
                         <img src={img} alt="picture slide" />

@@ -1,16 +1,24 @@
 // == Import des librairies
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faShoppingBag, faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faShoppingBag, faBars } from '@fortawesome/free-solid-svg-icons';
 import './header.scss';
+import Nav from '../Nav';
 
 // == Composant
 const Header = () => {
+
+    function openMenuNav() {
+        document.querySelector(".navigation").style.display = "block";
+        document.querySelector(".menu-navigation").style.color = "white";
+    }
+
     return (
         <header>
+            <Nav />
             <div className="header">
-                <div className="menu-navigation">
+                <div className="menu-navigation" onClick={openMenuNav}>
                     <FontAwesomeIcon icon={faBars} className="icon-item" />
                     <p>MENU</p>
                 </div>

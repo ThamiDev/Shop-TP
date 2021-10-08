@@ -5,6 +5,7 @@ import React from 'react';
 import Header from '../Header';
 import SlideShow from '../SlideShow';
 import News from '../News';
+import Footer from '../Footer';
 
 // == Composant
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Header />
             <SlideShow />
             <News />
+            <Footer />
         </div>
     );
 };
