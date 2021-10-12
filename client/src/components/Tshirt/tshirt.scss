@@ -1,0 +1,59 @@
+.container-tshirt {
+
+    .tshirt-header {
+
+        height: 400px;
+        width: 100%;
+        display: flex;
+        background-color: #e8f0f1;
+        overflow: hidden;
+
+        .left-header {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 480px;
+                width: auto;
+            }
+        }
+
+        .right-header {
+            height: 100%;
+            width: 50%;
+
+            .text-right-container {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+
+                p {
+                    margin: 3em 0;
+                    line-height: 22px;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                .button-slide {
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 15px;
+
+                    h4 {
+                        margin-right: 1em;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+        }
+    }
+}

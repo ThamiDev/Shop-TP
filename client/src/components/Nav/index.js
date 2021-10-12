@@ -1,7 +1,8 @@
 import React from 'react';
 import './nav.scss';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faTshirt, faMale, faFemale, faShoePrints, faUser, faPersonBooth, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faTshirt, faMale, faFemale, faShoePrints, faUser, faPersonBooth, faHome, faSocks } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
 
@@ -25,40 +26,36 @@ const Nav = () => {
             <div className="middel-navigation">
                 <ul>
                     <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faHome} />
-                        </div>
-                        <h3>ACCEUIL</h3>
+                        <NavLink exact to="/" activeClassName="nav-active">
+                            <div className="icon-item">
+                                <FontAwesomeIcon icon={faHome} />
+                            </div>
+                            <h3>ACCEUIL</h3>
+                        </NavLink>
                     </li>
                     <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faMale} />
-                        </div>
-                        <h3>HOMME</h3>
+                        <NavLink exact to="/tshirt" activeClassName="nav-active">
+                            <div className="icon-item">
+                                <FontAwesomeIcon icon={faTshirt} />
+                            </div>
+                            <h3>TSHIRT</h3>
+                        </NavLink>
                     </li>
                     <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faFemale} />
-                        </div>
-                        <h3>FEMME</h3>
+                        <NavLink exact to="/pantalons" activeClassName="nav-active">
+                            <div className="icon-item">
+                                <FontAwesomeIcon icon={faSocks} />
+                            </div>
+                            <h3>PANTALON</h3>
+                        </NavLink>
                     </li>
                     <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faTshirt} />
-                        </div>
-                        <h3>TSHIRT</h3>
-                    </li>
-                    <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faTimes} />
-                        </div>
-                        <h3>PANTALON</h3>
-                    </li>
-                    <li className="item">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faShoePrints} />
-                        </div>
-                        <h3>CHAUSSURES</h3>
+                        <NavLink exact to="/chaussures" activeClassName="nav-active">
+                            <div className="icon-item">
+                                <FontAwesomeIcon icon={faShoePrints} />
+                            </div>
+                            <h3>CHAUSSURES</h3>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

@@ -5,6 +5,9 @@ import './styles.scss';
 
 // == Import des composants
 import Home from '../Home';
+import Tshirt from '../Tshirt';
+import Pantalons from '../Pantalon';
+import Chaussures from '../Chaussures';
 
 // == Composant
 const App = () => { 
@@ -14,6 +17,9 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/tshirt" exact component={Tshirt} />
+          <Route path="/pantalons" exact component={Pantalons} />
+          <Route path="/chaussures" exact component={Chaussures} />
         </Switch>
       </BrowserRouter>
     </div>
