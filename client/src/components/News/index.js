@@ -1,10 +1,13 @@
+// == Import des librairies
 import React from 'react';
-import './news.scss';
 import img from './robe.jpg';
 import img1 from './robee.jpg';
 import img2 from './veste.jpg';
 
+// == Import du style
+import './news.scss';
 
+// == Composant
 const News = () => {
     return (
         <div className="container-news">
@@ -74,4 +77,5 @@ const News = () => {
     );
 };
 
+// == Export
 export default News;

@@ -1,11 +1,16 @@
+// == Import des librairies
 import React from 'react';
-import './nav.scss';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faTshirt, faMale, faFemale, faShoePrints, faUser, faPersonBooth, faHome, faSocks } from '@fortawesome/free-solid-svg-icons';
 
+// == Import du style
+import './nav.scss';
+
+// == Composant
 const Nav = () => {
 
+    // function qui désactive l'affiche du menu burger
     function closeMenuNav() {
         document.querySelector(".navigation").style.display = "none";
         document.querySelector(".menu-navigation").style.color = "black";
@@ -75,4 +80,5 @@ const Nav = () => {
     );
 };
 
+// == Export
 export default Nav;

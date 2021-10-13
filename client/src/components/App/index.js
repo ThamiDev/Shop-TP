@@ -1,13 +1,16 @@
 // == Import des librairies
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+// == Import du style
 import './styles.scss';
 
-// == Import des composants
+// == Import des Composants
 import Home from '../Home';
 import Tshirt from '../Tshirt';
 import Pantalons from '../Pantalon';
 import Chaussures from '../Chaussures';
+import Shop from '../Shop';
 
 // == Composant
 const App = () => { 
@@ -20,12 +23,12 @@ const App = () => {
           <Route path="/tshirt" exact component={Tshirt} />
           <Route path="/pantalons" exact component={Pantalons} />
           <Route path="/chaussures" exact component={Chaussures} />
+          <Route path="/shop" exact component={Shop} />
         </Switch>
       </BrowserRouter>
     </div>
   );
 }
-
 
 // == Export
 export default App;

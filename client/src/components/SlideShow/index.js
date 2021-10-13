@@ -1,9 +1,13 @@
+// == Import des librairies
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faChevronRight, faChevronCircleRight} from '@fortawesome/free-solid-svg-icons'
 import img from './px.png';
+
+// == Import du style
 import './slideshow.scss';
 
+// == Composant
 const SlideShow = () => {
     return (
         <div className="slideShow">
@@ -38,4 +42,5 @@ const SlideShow = () => {
     );
 };
 
+// == Export
 export default SlideShow;

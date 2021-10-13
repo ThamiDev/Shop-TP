@@ -1,10 +1,18 @@
+// == Import des librairies
 import React from 'react';
-import Header from '../Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import img from './pc.png'
+
+// == Import des Composants
+import Header from '../Header';
+import Footer from '../Footer';
+import News from '../News';
+
+// == Import du style
 import './pantalons.scss';
 
+// == Composant
 const Pantalons = () => {
     return (
         <div className="container-pantalons">
@@ -28,8 +36,11 @@ const Pantalons = () => {
 
                 </div>
             </div>
+            <News />
+            <Footer />
         </div>
     );
 };
 
+// == Export
 export default Pantalons;

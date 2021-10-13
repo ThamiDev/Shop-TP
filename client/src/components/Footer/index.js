@@ -1,6 +1,10 @@
+// == Import des librairies
 import React from 'react';
+
+// == Import du style
 import "./footer.scss";
 
+// == Composant
 const Footer = () => {
     return (
         <footer>
@@ -11,4 +15,5 @@ const Footer = () => {
     );
 };
 
+// == Export
 export default Footer;
