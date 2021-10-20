@@ -1,0 +1,60 @@
+.shop {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f0f1;
+
+    table {
+        height: auto;
+        width: 100%;
+        background-color: #f8f8f9;
+
+        tr {
+            height: 100px;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid white;
+        }
+
+        th {
+            text-align: center;
+            vertical-align: middle;
+            background-color:#e8f0f1;
+            font-weight: 800;
+            border: 1px solid white;
+        }
+    }
+    span {
+        color: red;
+    }
+
+    .total {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 2em;
+        border-bottom: 1px solid white;
+        font-weight: 700;
+    }
+    .valid {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em;
+        font-weight: 700;
+    }
+    .close {
+        width: 400px;
+        text-align: center;
+    }
+}
