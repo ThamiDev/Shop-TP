@@ -57,7 +57,7 @@
 |Visiteur|Accèder au repot github mis à disposition|Connâitre le code source du site|
 |Visiteur|Accéder aux mentions légales du site|Connaître les mentions légales|
 
-### Page Formulaire Connexion/S'incription
+### Page Connexion/S'incription
 |En tant que|Je veux pouvoir|Afin de|
 |---|---|---|
 |Visiteur|Naviguer à travers le site via une naviguation|Naviguer sur le site|
@@ -75,7 +75,10 @@
 |Admin|Naviguer à travers le site via une naviguation|Naviguer sur le site|
 |Admin|Accéder à la page d'inscription/connexion|Pouvoir s'inscrire/se connecter|
 |Admin|Accéder à la page de mon panier|Pouvoir visualiser mon panier|
-
+|Admin|Visualiser tous les articles disponibles|Pouvoir visualiser tous les articles|
+|Admin|Modifier tous les articles disponibles|Pouvoir modifier tous les articles|
+|Admin|Supprimer tous les articles disponibles|Pouvoir supprimer tous les articles|
+|Admin|Ajouter un articles avec tous ses détails|Pouvoir ajouter un article avec son titre, tailles et disponibilités|
 |Admin|Contacter les développeurs du site|Remonter différents bugs possibles|
 |Admin|Accèder au repot github mis à disposition|Connâitre le code source du site|
 |Admin|Accéder aux mentions légales du site|Connaître les mentions légales|
