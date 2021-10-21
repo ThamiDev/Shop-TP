@@ -1,0 +1,63 @@
+.article {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left-item {
+        width: 50%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    .right-item {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding: 6em 3em;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .color-item {
+            border: 1px solid black;
+            padding: 0.5em 0.8em;
+        }
+
+        .size {
+            display: flex;
+
+            p {
+                border: black 1px solid;
+                padding: 0.4em 0.6em;
+                margin: 0 0.6em;
+            }
+        }
+
+        .button-add {
+            width: 90%;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+    }
+}

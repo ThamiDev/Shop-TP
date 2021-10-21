@@ -11,6 +11,7 @@ import Tshirt from '../Tshirt';
 import Pantalons from '../Pantalon';
 import Chaussures from '../Chaussures';
 import Shop from '../Shop';
+import Item from '../Item';
 
 // == Composant
 const App = () => { 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/pantalons" exact component={Pantalons} />
           <Route path="/chaussures" exact component={Chaussures} />
           <Route path="/shop" exact component={Shop} />
+          <Route path="/article" exact component={Item} />
         </Switch>
       </BrowserRouter>
     </div>
