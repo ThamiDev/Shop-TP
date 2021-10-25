@@ -1,6 +1,6 @@
 // == Import des librairies
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faTshirt, faMale, faFemale, faShoePrints, faUser, faPersonBooth, faHome, faSocks } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,8 +12,9 @@ const Nav = () => {
 
     // function qui désactive l'affiche du menu burger
     function closeMenuNav() {
-        document.querySelector(".navigation").style.display = "none";
         document.querySelector(".menu-navigation").style.color = "black";
+        document.querySelector(".navigation").style.width = "0%";
+        document.querySelector(".navigation").style.padding = "0";
     }
 
     return (
@@ -66,14 +67,18 @@ const Nav = () => {
             </div>
             <div className="bottom-navigation">
                 <div className="profil">
-                    <FontAwesomeIcon icon={faUser} />
-                    <p>Profil</p>
+                    <NavLink exact to="/login" activeClassName="nav-active">
+                        <FontAwesomeIcon icon={faUser} />
+                        <p>Profil</p>
+                    </NavLink>
                 </div>
                 <div className="deconnexion">
-                    <div className="icon-item">
-                        <FontAwesomeIcon icon={faPersonBooth} />
-                    </div>
-                    <p>Deconnexion</p>
+                    <Link exact to="/login" activeClassName="nav-active">
+                        <div className="icon-item">
+                            <FontAwesomeIcon icon={faPersonBooth} />
+                        </div>
+                        <p>Connexion</p>
+                    </Link>
                 </div>
             </div>
         </div>

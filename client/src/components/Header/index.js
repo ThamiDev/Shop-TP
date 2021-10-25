@@ -17,6 +17,8 @@ const Header = () => {
     function openMenuNav() {
         document.querySelector(".navigation").style.display = "block";
         document.querySelector(".menu-navigation").style.color = "white";
+        document.querySelector(".navigation").style.width = "20%";
+        document.querySelector(".navigation").style.padding=  "1em 2em 2em 2em";
     }
 
     return (
