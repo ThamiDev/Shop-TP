@@ -67,18 +67,18 @@ const Nav = () => {
             </div>
             <div className="bottom-navigation">
                 <div className="profil">
+                    <FontAwesomeIcon icon={faUser} />
                     <NavLink exact to="/login" activeClassName="nav-active">
-                        <FontAwesomeIcon icon={faUser} />
                         <p>Profil</p>
                     </NavLink>
                 </div>
                 <div className="deconnexion">
-                    <Link exact to="/login" activeClassName="nav-active">
-                        <div className="icon-item">
-                            <FontAwesomeIcon icon={faPersonBooth} />
-                        </div>
+                    <div className="icon-item">
+                        <FontAwesomeIcon icon={faPersonBooth} />
+                    </div>
+                    <NavLink exact to="/login" activeClassName="nav-active">
                         <p>Connexion</p>
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
         </div>

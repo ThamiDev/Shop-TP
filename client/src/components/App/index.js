@@ -13,6 +13,7 @@ import Chaussures from '../Chaussures';
 import Shop from '../Shop';
 import Item from '../Item';
 import Login from '../Login';
+import Admin from '../Admin';
 
 // == Composant
 const App = () => { 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/shop" exact component={Shop} />
           <Route path="/article" exact component={Item} />
           <Route path="/login" exact component={Login} />
+          <Route path="/admin" exact component={Admin} />
         </Switch>
       </BrowserRouter>
     </div>
