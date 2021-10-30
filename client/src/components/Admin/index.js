@@ -90,6 +90,43 @@ const Admin = () => {
 
             <div className="creation">
                 <h3>Mettre en ligne un nouvelle article</h3>
+                <form>
+
+                    <div className="ref-article">
+                        <label for="ref">Réference de l'article</label>
+                        <input type="text" name="ref" id="ref" placeholder="référence"/>
+                    </div>
+
+                    <div className="nom-article">
+                        <label for="name">Nom de l'article</label>
+                        <input type="text" name="name" id="name" placeholder="nom de l'article"/>
+                    </div>
+
+                    <div className="color-article">
+                        <label for="color">Couleur de l'article</label>
+                        <input type="text" name="color" id="color" placeholder="couleur"/>
+                    </div>
+
+                    <div className="description-article">
+                        <label for="description">Description de l'article</label>
+                        <input type="fild" name="description" id="description" placeholder="description"/>
+                    </div>
+
+                    <div className="prix-article">
+                        <label for="prix">Prix de l'article</label>
+                        <input type="number" name="prix" id="prix" placeholder="prix de l'article"/>
+                    </div>
+
+                    <div>
+                        <label for="picture">Choisir la photo de l'article</label>
+                        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" placeholder="photo de l'article"/>
+                    </div>
+
+                    <div className="button-submit">
+                        <input type="submit" value="Envoyer le formulaire" />
+                    </div>
+
+                </form>
             </div>
         </div>
     );

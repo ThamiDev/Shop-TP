@@ -5,23 +5,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 // == Import du style
-import './login.scss';
-import img from './pcs.png';
+import './register.scss';
+import img from './pc.png';
 
 // == Import des Composants
 import Header from '../Header';
 
 // == Composant
-const Login = () => {
+const Register = () => {
     return (
         <div>
             <Header />
-            <div className="login">
+            <div className="register">
                 <img src={img} alt="background from" />
 
                 <div className="form">
-                    <h2>Connexion</h2>
+                    <h2>S'inscrire</h2>
                     <form action="" method="get">
+                        <div class="input">
+                            <label for="name">Prénom</label>
+                            <input type="text" name="name" id="name" placeholder="entrez votre prénom" required />
+                        </div>
                         <div class="input">
                             <label for="name">Email</label>
                             <input type="email" name="email" id="email" placeholder="entrez votre email" required />
@@ -31,14 +35,13 @@ const Login = () => {
                             <input type="text" name="password" id="password" placeholder="entrez votre mot de passe" required />
                         </div>
                         <div class="button">
-                            <input className="btn" type="submit" value="Connexion" />
+                            <input className="btn" type="submit" value="S'inscrire" />
                         </div>
                     </form>
 
-
-                    <div className="register">
-                        <Link exact to="/register" >
-                            <h3>où s'enregistrer</h3>
+                    <div className="connexion">
+                        <Link exact to="/login" >
+                            <h3>où se connecter</h3>
                         </Link>
                     </div>
                 </div>
@@ -50,4 +53,4 @@ const Login = () => {
 };
 
 // == Export
-export default Login;
+export default Register;
