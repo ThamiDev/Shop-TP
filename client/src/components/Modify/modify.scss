@@ -1,0 +1,93 @@
+.modify {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 1em;
+
+    .left-modify {
+        width: 50%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    .right-modify {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding: 6em 3em;
+        // border: 1px solid rgba(0, 0, 0, 0.500);
+
+        h3 {
+            height: 15%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            label {
+                display: block;
+                margin: .4rem 0;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            input {
+                font-size: 13px;
+                padding: 0.4em 0.5em;
+                margin-bottom: 1em;
+            }
+            .input-text {
+                width: 100%;
+                border: 1px solid rgb(133, 133, 133);
+                border-radius: 3px;
+            }
+
+            .button-submit {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                // margin-top: 1em;
+                .btn-input {
+                    width: 30%;
+                    background-color: #35429e;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 0.7em 0;
+                    border: none;
+                }
+            }
+
+            .sizes-input {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .size-input {
+                    width: 15%;
+                }
+            }
+        }
+
+    }
+}

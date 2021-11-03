@@ -229,14 +229,14 @@
     }
 
     .creation {
-        height: 600px;
+        height: auto;
         width: 50%;
         border: 1px solid rgba(0, 0, 0, 0.500);
         border-radius: 3px;
         margin: 1em;
         display: flex;
         flex-direction: column;
-        padding: 0 3em;
+        padding: 3em;
         
         h3 {
             height: 15%;
@@ -260,12 +260,45 @@
                 font-weight: 700;
             }
             input {
-                width: 100%;
-                border: 1px solid rgb(133, 133, 133);
-                border-radius: 3px;
                 font-size: 13px;
                 padding: 0.4em 0.5em;
                 margin-bottom: 1em;
+            }
+            .input-text {
+                width: 100%;
+                border: 1px solid rgb(133, 133, 133);
+                border-radius: 3px;
+            }
+
+            .button-submit {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                // margin-top: 1em;
+                .btn-input {
+                    width: 30%;
+                    background-color: #35429e;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 0.7em 0;
+                    border: none;
+                }
+            }
+
+            .sizes-input {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .size-input {
+                    width: 15%;
+                }
             }
         }
     }

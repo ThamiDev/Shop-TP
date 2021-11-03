@@ -23,8 +23,12 @@ const Register = () => {
                     <h2>S'inscrire</h2>
                     <form action="" method="get">
                         <div class="input">
-                            <label for="name">Prénom</label>
-                            <input type="text" name="name" id="name" placeholder="entrez votre prénom" required />
+                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="entrez votre prénom" required />
+                        </div>
+                        <div class="input">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name" placeholder="entrez votre nom" required />
                         </div>
                         <div class="input">
                             <label for="name">Email</label>
@@ -38,12 +42,6 @@ const Register = () => {
                             <input className="btn" type="submit" value="S'inscrire" />
                         </div>
                     </form>
-
-                    <div className="connexion">
-                        <Link exact to="/login" >
-                            <h3>où se connecter</h3>
-                        </Link>
-                    </div>
                 </div>
 
 

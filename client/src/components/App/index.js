@@ -15,6 +15,7 @@ import Item from '../Item';
 import Login from '../Login';
 import Admin from '../Admin';
 import Register from '../Register';
+import Modify from '../Modify';
 
 // == Composant
 const App = () => { 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/admin" exact component={Admin} />
+          <Route path="/modify" exact component={Modify} />
         </Switch>
       </BrowserRouter>
     </div>

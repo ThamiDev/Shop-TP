@@ -1,7 +1,7 @@
 // == Import des librairies
 import React from 'react';
 import Header from '../Header';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 // == Import du style
 import "./admin.scss";
@@ -29,9 +29,12 @@ const Admin = () => {
 
                     {Array(9).fill(1).map((el, i) =>
 
+
                         <div className="article">
                             <img src={img} alt="image de l'article" />
-                            <h4>VESTE Bleu</h4>
+                            <Link exact to="/modify" >
+                                <h4>VESTE Bleu</h4>
+                            </Link>
                             <table>
                                 <tr>
                                     <th>Taille</th>
@@ -61,6 +64,7 @@ const Admin = () => {
                             <p className="reference"> Réf: HTR00001</p>
                         </div>
 
+
                     )}
                 </div>
             </div>
@@ -89,43 +93,51 @@ const Admin = () => {
             </div>
 
             <div className="creation">
-                <h3>Mettre en ligne un nouvelle article</h3>
+                <h3>Mettre en ligne un nouvel article</h3>
                 <form>
 
                     <div className="ref-article">
                         <label for="ref">Réference de l'article</label>
-                        <input type="text" name="ref" id="ref" placeholder="référence"/>
+                        <input type="text" name="ref" id="ref" placeholder="référence" className="input-text" />
                     </div>
 
                     <div className="nom-article">
                         <label for="name">Nom de l'article</label>
-                        <input type="text" name="name" id="name" placeholder="nom de l'article"/>
+                        <input type="text" name="name" id="name" placeholder="nom de l'article" className="input-text" />
                     </div>
 
                     <div className="color-article">
                         <label for="color">Couleur de l'article</label>
-                        <input type="text" name="color" id="color" placeholder="couleur"/>
+                        <input type="text" name="color" id="color" placeholder="couleur" className="input-text" />
                     </div>
 
                     <div className="description-article">
                         <label for="description">Description de l'article</label>
-                        <input type="fild" name="description" id="description" placeholder="description"/>
+                        <input type="fild" name="description" id="description" placeholder="description" className="input-text" />
                     </div>
 
                     <div className="prix-article">
                         <label for="prix">Prix de l'article</label>
-                        <input type="number" name="prix" id="prix" placeholder="prix de l'article"/>
+                        <input type="number" name="prix" id="prix" placeholder="prix de l'article" className="input-text" />
+                    </div>
+
+                    <label>Tailles disponible</label>
+                    <div className="sizes-input">
+                        <input type="number" name="s" id="s" placeholder="S" className="size-input" />
+                        <input type="number" name="m" id="m" placeholder="M" className="size-input" />
+                        <input type="number" name="l" id="l" placeholder="L" className="size-input" />
+                        <input type="number" name="xl" id="xl" placeholder="XL" className="size-input" />
+                        <input type="number" name="xxl" id="xxl" placeholder="XXL" className="size-input" />
                     </div>
 
                     <div>
                         <label for="picture">Choisir la photo de l'article</label>
-                        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" placeholder="photo de l'article"/>
+                        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" placeholder="photo de l'article" />
                     </div>
 
                     <div className="button-submit">
-                        <input type="submit" value="Envoyer le formulaire" />
+                        <input className="btn-input" type="submit" value="Envoyer" />
                     </div>
-
                 </form>
             </div>
         </div>
