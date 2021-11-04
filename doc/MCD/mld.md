@@ -4,7 +4,7 @@ UTILISATEUR: prénom, nom, email, mot_de_passe, role
 
 COMMANDE: status
 Enregistrer, 1N COMMANDE, 0N PRODUIT
-PRODUIT: nom, description, prix, stock
+PRODUIT: nom, description, image, prix, quantité
 
 :
 CATEGORIE: code_categorie, nom
