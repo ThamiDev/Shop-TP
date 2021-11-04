@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS user, order, product, category, order_has_product;
+DROP TABLE IF EXISTS "user", "order", "product", "category", "order_has_product";
 
 CREATE TABLE "user" (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -21,6 +21,14 @@ CREATE TABLE "order" (
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+
+CREATE TABLE "category" (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE "product" (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL,
@@ -33,17 +41,10 @@ CREATE TABLE "product" (
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE TABLE "category" (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name TEXT NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
 CREATE TABLE order_has_product (
     product_id INT NOT NULL REFERENCES "product"(id),
     order_id INT NOT NULL REFERENCES "order"(id),
-    PRIMARY KEY(product_id, order_id) ON DELETE CASCADE
+    PRIMARY KEY(product_id, order_id)
 );
 
 COMMIT;

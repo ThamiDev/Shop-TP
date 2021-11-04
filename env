@@ -1,0 +1,2 @@
+PORT=3000
+PG_URL=postgresql://shoptp:shoptp@localhost:5432/shoptp
