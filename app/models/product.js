@@ -8,7 +8,6 @@ Product.init(
     name: DataTypes.TEXT,
     description: DataTypes.TEXT,
     picture: DataTypes.TEXT,
-    password: DataTypes.TEXT,
     price: DataTypes.INTEGER,
     amount: DataTypes.INTEGER,
     category_id: DataTypes.INTEGER

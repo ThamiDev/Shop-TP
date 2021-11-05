@@ -17,7 +17,7 @@ router.get('/api', mainController.homePage);
 /**
  * routes des products
  */
-
+router.get('/api/products', productController.getAllProducts);
 /**
  * routes des orders
  */
