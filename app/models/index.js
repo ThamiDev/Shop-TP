@@ -43,4 +43,4 @@ Product.belongsToMany(Order, {
 })
 
 /* Exports */
-module.exports = { User, Product, Category };
+module.exports = { User, Product, Category, Order };
