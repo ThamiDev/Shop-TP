@@ -15,6 +15,11 @@ const router = express.Router();
 router.get('/api', mainController.homePage);
 
 /**
+ * routes des users
+ */
+router.post('/api/register', userController.signUp);
+
+/**
  * routes des products
  */
 router.get('/api/product/:id', productController.getOneProduct);
@@ -28,9 +33,6 @@ router.delete('/api/product/:id', productController.deleteProduct);
  * routes des orders
  */
 
-/**
- * routes des users
- */
 
 
 router.use((req, res) => {

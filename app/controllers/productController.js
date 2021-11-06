@@ -55,7 +55,7 @@ const productController = {
 
     createProduct: async (req, res) => {
         try {
-            const { name, description, picture, amount, category_id } = req.body;
+            const { name, description, picture, price, amount, category_id } = req.body;
 
             const bodyErrors = [];
             if (!name) {
@@ -70,23 +70,27 @@ const productController = {
             if (!amount) {
                 bodyErrors.push("amount can't be empty");
             }
+            if (!price) {
+                bodyErrors.push("amount can't be empty");
+            }
             if (!category_id) {
                 bodyErrors.push("categoryId can't be empty");
             }
             if (bodyErrors.length) {
-                return res.status(400).json(bodyErrors);
+                return res.json(bodyErrors).status(400);
             }
 
             const newProduct = Product.build({
                 name,
                 description,
                 picture,
+                price,
                 amount,
                 category_id
             });
 
             await newProduct.save();
-            res.json(newProduct);
+            res.json(newProduct).status(200);
 
         } catch (error) {
             console.trace(error);
@@ -136,6 +140,6 @@ const productController = {
     }
 
 
-}
+};
 
 module.exports = productController;

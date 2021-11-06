@@ -14,6 +14,11 @@ app.use(express.urlencoded({extended: true}));
 const mutipartParser = multer();
 app.use(mutipartParser.none());
 
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 
 // on met les assets (pour le front) en statique
 app.use( express.static('assets') );
