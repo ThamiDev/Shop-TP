@@ -101,7 +101,7 @@ const productController = {
     modifyProduct: async (req, res) => {
         try {
             const productId = req.params.id;
-            const { name, description, picture, amount, category_id } = req.body;
+            const { name, description, picture, price, amount, category_id } = req.body;
 
             const product = await Product.findByPk(productId);
             if (!product) {
@@ -111,6 +111,7 @@ const productController = {
             product.name = name || product.name;
             product.description = description || product.description;
             product.picture = picture || product.picture;
+            product.price = price || product.price;
             product.amount = amount || product.amount;
             product.category_id = category_id || product.category_id;
             await product.save();

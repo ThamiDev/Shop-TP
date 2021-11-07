@@ -97,41 +97,32 @@ const Admin = () => {
                 <form>
 
                     <div className="ref-article">
-                        <label for="ref">Réference de l'article</label>
+                        <label htmlFor="ref">Réference de l'article</label>
                         <input type="text" name="ref" id="ref" placeholder="référence" className="input-text" />
                     </div>
 
                     <div className="nom-article">
-                        <label for="name">Nom de l'article</label>
+                        <label htmlFor="name">Nom de l'article</label>
                         <input type="text" name="name" id="name" placeholder="nom de l'article" className="input-text" />
                     </div>
 
                     <div className="color-article">
-                        <label for="color">Couleur de l'article</label>
+                        <label htmlFor="color">Couleur de l'article</label>
                         <input type="text" name="color" id="color" placeholder="couleur" className="input-text" />
                     </div>
 
                     <div className="description-article">
-                        <label for="description">Description de l'article</label>
+                        <label htmlFor="description">Description de l'article</label>
                         <input type="fild" name="description" id="description" placeholder="description" className="input-text" />
                     </div>
 
                     <div className="prix-article">
-                        <label for="prix">Prix de l'article</label>
+                        <label htmlFor="prix">Prix de l'article</label>
                         <input type="number" name="prix" id="prix" placeholder="prix de l'article" className="input-text" />
                     </div>
 
-                    <label>Tailles disponible</label>
-                    <div className="sizes-input">
-                        <input type="number" name="s" id="s" placeholder="S" className="size-input" />
-                        <input type="number" name="m" id="m" placeholder="M" className="size-input" />
-                        <input type="number" name="l" id="l" placeholder="L" className="size-input" />
-                        <input type="number" name="xl" id="xl" placeholder="XL" className="size-input" />
-                        <input type="number" name="xxl" id="xxl" placeholder="XXL" className="size-input" />
-                    </div>
-
                     <div>
-                        <label for="picture">Choisir la photo de l'article</label>
+                        <label htmlFor="picture">Choisir la photo de l'article</label>
                         <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" placeholder="photo de l'article" />
                     </div>
 

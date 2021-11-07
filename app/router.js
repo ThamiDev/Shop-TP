@@ -1,7 +1,6 @@
 const express = require('express');
 
 // importer les controllers
-const mainController = require('./controllers/mainController');
 const orderController = require('./controllers/orderController');
 const productController = require('./controllers/productController');
 const userController = require('./controllers/userController');
@@ -10,14 +9,12 @@ const userController = require('./controllers/userController');
 const router = express.Router();
 
 /**
- * routes Main
- */
-router.get('/api', mainController.homePage);
-
-/**
  * routes des users
  */
+router.get('/api/users', userController.getAllUsers);
 router.post('/api/register', userController.signUp);
+router.post('/api/login', userController.signIn);
+router.get('/api/logout', userController.logout);
 
 /**
  * routes des products

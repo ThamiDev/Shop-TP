@@ -23,11 +23,11 @@ const Login = () => {
                     <h2>Connexion</h2>
                     <form action="" method="get">
                         <div class="input">
-                            <label for="name">Email</label>
+                            <label htmlFor="name">Email</label>
                             <input type="email" name="email" id="email" placeholder="entrez votre email" required />
                         </div>
                         <div class="input">
-                            <label for="password">Mot de Passe</label>
+                            <label htmlFor="password">Mot de Passe</label>
                             <input type="text" name="password" id="password" placeholder="entrez votre mot de passe" required />
                         </div>
                         <div class="button">
