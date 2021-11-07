@@ -2,8 +2,8 @@ const { User } = require("../models");
 const jwt = require('jsonwebtoken');
 
 const maxAge = 20 * 60 * 1000;
-const createToken = (id) => {
-    return jwt.sign({id}, process.env.TOKEN_SECRET, {
+const createToken = (user) => {
+    return jwt.sign({user}, process.env.TOKEN_SECRET, {
         expiresIn: maxAge
     })
 }
@@ -70,12 +70,12 @@ const userController = {
                     password: password
                 }
             });
-            const token = createToken(user.id); 
+            const token = createToken(user); 
             res.cookie('jwt', token, { 
                 httpOnly: true,
                 maxAge: maxAge
             });
-            res.status(200).json("connection success");
+            res.status(200).json(token);
 
         } catch (error) {
             console.trace(error);
