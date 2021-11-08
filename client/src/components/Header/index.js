@@ -2,11 +2,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faShoppingBag, faBars, faCog } from '@fortawesome/free-solid-svg-icons';
-import jwt_decode from 'jwt-decode';
+import { faUser, faShoppingBag, faBars, faCog, faBan } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 // == Import du style
 import './header.scss';
+import img from './pc.png';
 
 // == Import des Composants
 import Nav from '../Nav';
@@ -42,9 +43,15 @@ const Header = () => {
     } else if (window.matchMedia("(min-width: 0px)").matches) {
       document.querySelector(".navigation").style.width = "80%";
     }
-
   }
-
+  function Logout() {
+    axios.get('http://localhost:3000/api/logout')
+      .then(() => {
+      }
+      ).catch(error => console.log(error))
+    localStorage.removeItem("token");
+    window.location.reload();
+  }
   const token = localStorage.getItem("token");
 
 
@@ -57,19 +64,19 @@ const Header = () => {
           <p>MENU</p>
         </div>
         <div className="logo-header">
-          <NavLink exact to="/" activeClassName="nav-active">
+          <NavLink exact to="/">
             <h2>Mr.</h2>
             <h2>B<span>a</span>r<span>a</span></h2>
           </NavLink>
         </div>
         <div className="items-header">
           <div className="item">
-            <NavLink exact to="/admin" activeClassName="nav-active">
+            <NavLink exact to="/admin">
               <FontAwesomeIcon icon={faCog} className="icon-item" />
             </NavLink>
           </div>
           <div className="item">
-            <NavLink exact to="/shop" activeClassName="nav-active">
+            <NavLink exact to="/shop">
               <FontAwesomeIcon icon={faShoppingBag} className="icon-item" />
               <div className="number-shop">
                 <p>0</p>
@@ -79,11 +86,17 @@ const Header = () => {
           {!token
             ? (
               <div className="item">
-                <NavLink exact to="/login" activeClassName="nav-active">
+                <NavLink exact to="/login">
                   <FontAwesomeIcon icon={faUser} className="icon-item" />
                 </NavLink>
               </div>
-            ) : null}
+            ) : (
+              <div className="item">
+                <NavLink exact to="/" onClick={Logout}>
+                <FontAwesomeIcon icon={faBan} className="icon-item"/>
+                </NavLink>
+              </div>
+            )}
         </div>
       </div>
     </header>

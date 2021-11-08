@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
 // == Import du style
@@ -17,12 +15,13 @@ import Header from '../Header';
 const Register = () => {
 
   const history = useHistory();
+  // states pour récupérer la data du formulaire
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // console.log(firstname, lastname, email, password);
 
+  // requête vers le back pour créer un nouvelle utilisateur en base de donnée
   const formSubmit = (event) => {
     event.preventDefault();
     axios.post('http://localhost:3000/api/register', {

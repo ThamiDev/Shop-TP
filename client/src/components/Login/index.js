@@ -1,8 +1,6 @@
 // == Import des librairies
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
 // == Import du style
@@ -16,9 +14,9 @@ import Header from '../Header';
 const Login = () => {
 
   const history = useHistory();
+  // states pour récupérer la data du formulaire
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // console.log(email, password);
 
   const formSubmit = (event) => {
     event.preventDefault();

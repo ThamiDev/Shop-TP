@@ -81,14 +81,14 @@ const Nav = () => {
       <div className="bottom-navigation">
         <div className="profil">
           <FontAwesomeIcon icon={faUser} />
-          <NavLink exact to="/login" activeClassName="nav-active">
-            {!token
-              ? (
+          {!token
+            ? (
+              <NavLink exact to="/login" activeClassName="nav-active">
                 <p>Profil</p>
-              ) : (
-                <p>{jwt_decode(localStorage.getItem("token")).user.firstname} {jwt_decode(localStorage.getItem("token")).user.lastname}</p>
-              )}
-          </NavLink>
+              </NavLink>
+            ) : (
+              <p>{jwt_decode(localStorage.getItem("token")).user.firstname} {jwt_decode(localStorage.getItem("token")).user.lastname}</p>
+            )}
         </div>
         <div className="deconnexion">
           <div className="icon-item">
