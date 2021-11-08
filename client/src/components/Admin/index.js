@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../Header';
 import { NavLink, Link } from 'react-router-dom';
+import Creation from './creation'
 
 // == Import du style
 import "./admin.scss";
@@ -76,50 +77,7 @@ const Admin = () => {
                 </div>
             </div>
 
-            <div className="creation">
-                <h3>Mettre en ligne un nouvel article</h3>
-                <form>
-
-                    <div className="ref-article">
-                        <label htmlFor="ref">Réference de l'article</label>
-                        <input type="text" name="ref" id="ref" placeholder="référence" className="input-text" />
-                    </div>
-
-                    <div className="nom-article">
-                        <label htmlFor="name">Nom de l'article</label>
-                        <input type="text" name="name" id="name" placeholder="nom de l'article" className="input-text" />
-                    </div>
-
-                    <div className="color-article">
-                        <label htmlFor="color">Couleur de l'article</label>
-                        <input type="text" name="color" id="color" placeholder="couleur" className="input-text" />
-                    </div>
-
-                    <div className="description-article">
-                        <label htmlFor="description">Description de l'article</label>
-                        <input type="fild" name="description" id="description" placeholder="description" className="input-text" />
-                    </div>
-
-                    <div className="prix-article">
-                        <label htmlFor="prix">Prix de l'article</label>
-                        <input type="number" name="prix" id="prix" placeholder="prix de l'article" className="input-text" />
-                    </div>
-
-                    <div className="quantite-article">
-                        <label htmlFor="quantite">Quantité de l'article</label>
-                        <input type="number" name="quantite" id="quantite" placeholder="quantite de l'article" className="input-text" />
-                    </div>
-
-                    <div>
-                        <label htmlFor="picture">Choisir la photo de l'article</label>
-                        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" placeholder="photo de l'article" />
-                    </div>
-
-                    <div className="button-submit">
-                        <input className="btn-input" type="submit" value="Envoyer" />
-                    </div>
-                </form>
-            </div>
+            <Creation />
         </div>
     );
 };
