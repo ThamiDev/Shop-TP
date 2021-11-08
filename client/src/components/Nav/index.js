@@ -52,27 +52,27 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/newera" activeClassName="nav-active">
-              <div className="icon-item">
-                <FontAwesomeIcon icon={faTshirt} />
-              </div>
-              <h3>NEW ERA</h3>
-            </NavLink>
-          </li>
-          <li className="item">
-            <NavLink exact to="/capslab" activeClassName="nav-active">
+            <NavLink exact to="/bonnet" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faSocks} />
               </div>
-              <h3>CAPSLAB</h3>
+              <h3>BONNET</h3>
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/von-dutch" activeClassName="nav-active">
+            <NavLink exact to="/casquette" activeClassName="nav-active">
+              <div className="icon-item">
+                <FontAwesomeIcon icon={faTshirt} />
+              </div>
+              <h3>CASQUETTE</h3>
+            </NavLink>
+          </li>
+          <li className="item">
+            <NavLink exact to="/bob" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faShoePrints} />
               </div>
-              <h3>VON DUTCH</h3>
+              <h3>BOBS</h3>
             </NavLink>
           </li>
         </ul>

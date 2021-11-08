@@ -5,7 +5,7 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import img from './pc.png'
 
 // == Import du style
-import './vondutch.scss';
+import './bob.scss';
 
 // == Import des Composants
 import Header from '../Header';
@@ -13,11 +13,11 @@ import Footer from '../Footer';
 import News from '../News';
 
 // == Composant
-const Vondutch = () => {
+const Bob = () => {
     return (
-        <div className="container-vonduct">
+        <div className="container-bob">
         <Header />
-        <div className="vondutch-header">
+        <div className="bob-header">
             <div className="left-header">
                 <div className="picture-slide">
                     <img src={img} alt="picture slide" />
@@ -43,4 +43,4 @@ const Vondutch = () => {
 };
 
 // == Export
-export default Vondutch;
+export default Bob;
