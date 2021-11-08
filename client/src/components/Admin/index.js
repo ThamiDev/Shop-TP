@@ -5,7 +5,7 @@ import { NavLink, Link } from 'react-router-dom';
 
 // == Import du style
 import "./admin.scss";
-import img from './pc.jpg';
+import img from './pc.png';
 
 // == Composant
 const Admin = () => {
@@ -33,32 +33,16 @@ const Admin = () => {
                         <div className="article">
                             <img src={img} alt="image de l'article" />
                             <Link exact to="/modify" >
-                                <h4>VESTE Bleu</h4>
+                                <h4>Casquette New Era</h4>
                             </Link>
                             <table>
                                 <tr>
-                                    <th>Taille</th>
+                                    <th>Prix</th>
                                     <th>Stock</th>
                                 </tr>
                                 <tr>
-                                    <td>XXL</td>
+                                    <td>29.99</td>
                                     <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>XL</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>L</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <td>M</td>
-                                    <td>18</td>
-                                </tr>
-                                <tr>
-                                    <td>S</td>
-                                    <td>10</td>
                                 </tr>
                             </table>
                             <p className="reference"> Réf: HTR00001</p>
@@ -119,6 +103,11 @@ const Admin = () => {
                     <div className="prix-article">
                         <label htmlFor="prix">Prix de l'article</label>
                         <input type="number" name="prix" id="prix" placeholder="prix de l'article" className="input-text" />
+                    </div>
+
+                    <div className="quantite-article">
+                        <label htmlFor="quantite">Quantité de l'article</label>
+                        <input type="number" name="quantite" id="quantite" placeholder="quantite de l'article" className="input-text" />
                     </div>
 
                     <div>

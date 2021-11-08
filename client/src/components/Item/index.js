@@ -21,18 +21,10 @@ const Item = () => {
                     <img src={img} alt="image de l'article" />
                 </div>
                 <div className="right-item">
-                    <h2>Veste de Costume</h2>
-                    <p className="price">59.99€</p>
-                    <p className="description">Une veste de costume bleu disponible sous plusieurs tailles</p>
-                    <p className="color-item">Bleu</p>
-                    <div className="size">
-                        <p>S</p>
-                        <p>M</p>
-                        <p>L</p>
-                        <p>XL</p>
-                        <p>XXL</p>
-                    </div>
-                    <p>taille: M</p>
+                    <h2>Casquette New Era</h2>
+                    <p className="price">29.99€</p>
+                    <p className="description">Casquette New Era nouvelle collection</p>
+                    <p className="color-item">Rouge</p>
                     <div className="button-add">
                         <p>Ajouter au Panier</p>
                     </div>

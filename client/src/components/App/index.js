@@ -7,15 +7,15 @@ import './styles.scss';
 
 // == Import des Composants
 import Home from '../Home';
-import Tshirt from '../Tshirt';
-import Pantalons from '../Pantalon';
-import Chaussures from '../Chaussures';
+import Vondutch from '../Vondutch';
 import Shop from '../Shop';
 import Item from '../Item';
 import Login from '../Login';
 import Admin from '../Admin';
 import Register from '../Register';
 import Modify from '../Modify';
+import Newera from '../Newera';
+import Capslab from '../Capslab';
 
 // == Composant
 const App = () => { 
@@ -25,9 +25,9 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/tshirt" exact component={Tshirt} />
-          <Route path="/pantalons" exact component={Pantalons} />
-          <Route path="/chaussures" exact component={Chaussures} />
+          <Route path="/newera" exact component={Newera} />
+          <Route path="/capslab" exact component={Capslab} />
+          <Route path="/von-dutch" exact component={Vondutch} />
           <Route path="/shop" exact component={Shop} />
           <Route path="/article" exact component={Item} />
           <Route path="/login" exact component={Login} />

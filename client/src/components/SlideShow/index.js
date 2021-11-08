@@ -24,9 +24,9 @@ const SlideShow = () => {
                 <div className="right-container">
 
                     <div className="text-right-container">
-                        <h1>Nouvelle Collection Hiver
+                        <h1>Nouvelle Collection New Era
                         </h1>
-                        <p>Lorem ipsum dolar sit amet, consectetur adipis elit. Nunc imperdiet, nulla a scelerisque condimentum, enim mi blandit erat, at blandit.</p>
+                        <p>Bienvenue sur notre shop en ligne, nous proposons ici plusieurs modèles de casquette sous plusieurs marques.</p>
                         <div className="button-slide">
                             <h4>VIEW COLLECTION</h4>
                             <FontAwesomeIcon icon={faChevronCircleRight} className="icon-item" />

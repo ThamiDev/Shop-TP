@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faShoppingBag, faBars, faCog, faBan } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faShoppingBag, faBars, faCog, faBan, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
 // == Import du style
@@ -93,7 +93,7 @@ const Header = () => {
             ) : (
               <div className="item">
                 <NavLink exact to="/" onClick={Logout}>
-                <FontAwesomeIcon icon={faBan} className="icon-item"/>
+                <FontAwesomeIcon icon={faSignOutAlt} className="icon-item"/>
                 </NavLink>
               </div>
             )}

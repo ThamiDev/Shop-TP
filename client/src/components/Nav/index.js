@@ -26,7 +26,6 @@ const Nav = () => {
     localStorage.removeItem("token");
     window.location.reload();
   }
-
   const token = localStorage.getItem("token");
 
 
@@ -53,27 +52,27 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/tshirt" activeClassName="nav-active">
+            <NavLink exact to="/newera" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faTshirt} />
               </div>
-              <h3>TSHIRT</h3>
+              <h3>NEW ERA</h3>
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/pantalons" activeClassName="nav-active">
+            <NavLink exact to="/capslab" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faSocks} />
               </div>
-              <h3>PANTALON</h3>
+              <h3>CAPSLAB</h3>
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/chaussures" activeClassName="nav-active">
+            <NavLink exact to="/von-dutch" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faShoePrints} />
               </div>
-              <h3>CHAUSSURES</h3>
+              <h3>VON DUTCH</h3>
             </NavLink>
           </li>
         </ul>

@@ -10,14 +10,14 @@ import Footer from '../Footer';
 import News from '../News';
 
 // == Import du style
-import './pantalons.scss';
+import './capslab.scss';
 
 // == Composant
-const Pantalons = () => {
+const Capslab = () => {
     return (
-        <div className="container-pantalons">
+        <div className="container-capslab">
             <Header />
-            <div className="pantalons-header">
+            <div className="capslab-header">
                 <div className="left-header">
                     <div className="picture-slide">
                         <img src={img} alt="picture slide" />
@@ -26,7 +26,7 @@ const Pantalons = () => {
                 <div className="right-header">
 
                     <div className="text-right-container">
-                        <h1>Collection de Pantalons</h1>
+                        <h1>Nouvelle Collection Capslab</h1>
                         <p>Lorem ipsum dolar sit amet, consectetur adipis elit. Nunc imperdiet, nulla a scelerisque condimentum, enim mi blandit erat, at blandit.</p>
                         <div className="button-slide">
                             <h4>VIEW COLLECTION</h4>
@@ -43,4 +43,4 @@ const Pantalons = () => {
 };
 
 // == Export
-export default Pantalons;
+export default Capslab;

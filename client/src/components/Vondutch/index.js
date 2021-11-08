@@ -5,7 +5,7 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import img from './pc.png'
 
 // == Import du style
-import './chaussures.scss';
+import './vondutch.scss';
 
 // == Import des Composants
 import Header from '../Header';
@@ -13,11 +13,11 @@ import Footer from '../Footer';
 import News from '../News';
 
 // == Composant
-const Chaussures = () => {
+const Vondutch = () => {
     return (
-        <div className="container-chaussures">
+        <div className="container-vonduct">
         <Header />
-        <div className="chaussures-header">
+        <div className="vondutch-header">
             <div className="left-header">
                 <div className="picture-slide">
                     <img src={img} alt="picture slide" />
@@ -26,7 +26,7 @@ const Chaussures = () => {
             <div className="right-header">
 
                 <div className="text-right-container">
-                    <h1>Collection de Chaussures</h1>
+                    <h1>Nouvelle Collection Von Dutch</h1>
                     <p>Lorem ipsum dolar sit amet, consectetur adipis elit. Nunc imperdiet, nulla a scelerisque condimentum, enim mi blandit erat, at blandit.</p>
                     <div className="button-slide">
                         <h4>VIEW COLLECTION</h4>
@@ -43,4 +43,4 @@ const Chaussures = () => {
 };
 
 // == Export
-export default Chaussures;
+export default Vondutch;
