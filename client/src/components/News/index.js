@@ -18,54 +18,102 @@ const News = () => {
         <p>Les nouveautés sont mises à l'honneur.</p>
       </div>
       <div className="products-news">
-        <NavLink exact to="/article">
-          <div className="product">
-            <img src={img} alt="description" />
-            <div className="description-product">
-              <h3>New Era</h3>
-              <h4>29.99€</h4>
-              <div className="color-product">
-                <p>BLANCHE</p>
-              </div>
+
+        <div className="product">
+          <img src={img} alt="description" />
+          <div className="description-product">
+            <h3>New Era</h3>
+            <h4>29.99€</h4>
+          </div>
+          <div className="order">
+            <div>
+              <Link exact to="/article">
+                <button>
+                  Voir le produit
+              </button>
+              </Link>
+            </div>
+            <div>
+              <Link exact to="/shop">
+                <button>
+                  Ajouter au panier
+              </button>
+              </Link>
             </div>
           </div>
-        </NavLink>
-        <NavLink exact to="/article">
-          <div className="product">
-            <img src={img2} alt="description" />
-            <div className="description-product">
-              <h3>New Era</h3>
-              <h4>29.99€</h4>
-              <div className="color-product">
-                <p>GRISE</p>
-              </div>
+        </div>
+
+        <div className="product">
+          <img src={img2} alt="description" />
+          <div className="description-product">
+            <h3>New Era</h3>
+            <h4>29.99€</h4>
+            <div className="order">
+            <div>
+              <Link exact to="/article">
+                <button>
+                  Voir le produit
+              </button>
+              </Link>
+            </div>
+            <div>
+              <Link exact to="/shop">
+                <button>
+                  Ajouter au panier
+              </button>
+              </Link>
             </div>
           </div>
-        </NavLink>
-        <NavLink exact to="/article">
-          <div className="product">
-            <img src={img1} alt="description" />
-            <div className="description-product">
-              <h3>New Era</h3>
-              <h4>29.99€</h4>
-              <div className="color-product">
-                <p>NOIRE</p>
-              </div>
+          </div>
+        </div>
+
+        <div className="product">
+          <img src={img1} alt="description" />
+          <div className="description-product">
+            <h3>New Era</h3>
+            <h4>29.99€</h4>
+            <div className="order">
+            <div>
+              <Link exact to="/article">
+                <button>
+                  Voir le produit
+              </button>
+              </Link>
+            </div>
+            <div>
+              <Link exact to="/shop">
+                <button>
+                  Ajouter au panier
+              </button>
+              </Link>
             </div>
           </div>
-        </NavLink>
-        <NavLink exact to="/article">
-          <div className="product">
-            <img src={img3} alt="description" />
-            <div className="description-product">
-              <h3>New Era</h3>
-              <h4>29.99€</h4>
-              <div className="color-product">
-                <p>ROUGE</p>
-              </div>
+          </div>
+        </div>
+        <div className="product">
+          <img src={img3} alt="description" />
+          <div className="description-product">
+            <h3>New Era</h3>
+            <h4>29.99€</h4>
+            <div className="order">
+            <div>
+              <Link exact to="/article">
+                <button>
+                  Voir le produit
+              </button>
+              </Link>
+            </div>
+            <div>
+              <Link exact to="/shop">
+                <button>
+                  Ajouter au panier
+              </button>
+              </Link>
             </div>
           </div>
-        </NavLink>
+          </div>
+        </div>
+
       </div>
     </div>
   );

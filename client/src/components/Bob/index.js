@@ -26,7 +26,8 @@ const Bob = () => {
             <div className="right-header">
 
                 <div className="text-right-container">
-                    <h1>Nouvelle Collection Von Dutch</h1>
+                    <h1>Nouvelle Collection Bobs
+                    </h1>
                     <p>Lorem ipsum dolar sit amet, consectetur adipis elit. Nunc imperdiet, nulla a scelerisque condimentum, enim mi blandit erat, at blandit.</p>
                     <div className="button-slide">
                         <h4>VIEW COLLECTION</h4>

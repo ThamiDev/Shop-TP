@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #35429e;
+        background-color: #900c3e;
         color: white;
         margin-bottom: 2em;
 
@@ -117,7 +117,7 @@
                     text-align: center;
                     font-size: 14px;
                     font-weight: 700;
-                    background-color: #35429e;
+                    background-color: #571845;
                     color: white;
                     padding: 0.4em 0;
                 }
@@ -162,7 +162,7 @@
                 p {
                     width: 90%;
                     height: 55%;
-                    border: 2px solid #35429e;
+                    border: 2px solid #571845;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -180,7 +180,7 @@
                 p {
                     width: 90%;
                     height: 55%;
-                    background-color: #35429e;
+                    background-color: #571845;
                     color: white;
                     display: flex;
                     justify-content: center;
@@ -278,7 +278,7 @@
                 // margin-top: 1em;
                 .btn-input {
                     width: 30%;
-                    background-color: #35429e;
+                    background-color: #571845;
                     color: white;
                     display: flex;
                     justify-content: center;
@@ -288,6 +288,7 @@
                     font-weight: 700;
                     padding: 0.7em 0;
                     border: none;
+                    cursor: pointer;
                 }
             }
 
