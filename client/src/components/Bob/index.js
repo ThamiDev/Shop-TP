@@ -1,10 +1,11 @@
 // == Import des librairies
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-import img from './pc.png'
+import axios from 'axios';
 
 // == Import du style
+import img from './pc.png'
 import './bob.scss';
 
 // == Import des Composants
@@ -14,6 +15,18 @@ import News from '../News';
 
 // == Composant
 const Bob = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/products/3/category')
+      .then((response) => {
+        setData(response.data)
+      }).catch((error) => {
+        console.log(error)
+      });
+    }, []);
+
     return (
         <div className="container-bob">
         <Header />
@@ -37,7 +50,7 @@ const Bob = () => {
 
             </div>
         </div>
-        <News />
+        <News data={data}/>
         <Footer />
     </div>
     );

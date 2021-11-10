@@ -1,5 +1,6 @@
 const { User } = require("../models");
 const jwt = require('jsonwebtoken');
+const { hashSync, compare } = require('bcrypt');
 
 const maxAge = 20 * 60 * 1000;
 const createToken = (user) => {
@@ -28,6 +29,12 @@ const userController = {
         try {
             const { firstname, lastname, email, password } = req.body;
 
+            const user = await User.findOne({
+                where: {
+                    email: email
+                }
+            })
+            console.log(user);
             const bodyErrors = [];
             if (!firstname) {
                 bodyErrors.push("firstname can't be empty");
@@ -41,15 +48,18 @@ const userController = {
             if (!password) {
                 bodyErrors.push("password can't be empty");
             }
-            if (bodyErrors.length) {
-                return res.json(bodyErrors).status(400);
+            if (user) {
+                bodyErrors.push("Cet email existe déjà");
+            }
+            if (bodyErrors.length > 0) {
+                return res.json({bodyErrors}).status(400);
             }
 
             const newUser = User.build({
                 firstname,
                 lastname,
                 email,
-                password,
+                password: hashSync(password, 8),
             });
 
             await newUser.save();
@@ -67,15 +77,25 @@ const userController = {
             const user = await User.findOne({
                 where: {
                     email: email,
-                    password: password
                 }
             });
+            if (!user) {
+                return res.json({
+                    error: "Email incorrect"
+                });
+            }
+            const checkingPassword = await compare(password, user.password);
+            if (!checkingPassword) {
+                return res.json({
+                    error: "Mot de passe incorrect"
+                });
+            }
             const token = createToken(user); 
             res.cookie('jwt', token, { 
                 httpOnly: true,
                 maxAge: maxAge
             });
-            res.status(200).json(token);
+            res.status(200).json({token});
 
         } catch (error) {
             console.trace(error);

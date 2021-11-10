@@ -10,7 +10,8 @@ import img2 from './pc2.png';
 import img3 from './pc.jpg';
 
 // == Composant
-const News = () => {
+const News = ({ data }) => {
+
   return (
     <div className="container-news">
       <div className="title-news">
@@ -19,35 +20,14 @@ const News = () => {
       </div>
       <div className="products-news">
 
-        <div className="product">
-          <img src={img} alt="description" />
-          <div className="description-product">
-            <h3>New Era</h3>
-            <h4>29.99€</h4>
-          </div>
-          <div className="order">
-            <div>
-              <Link exact to="/article">
-                <button>
-                  Voir le produit
-              </button>
-              </Link>
-            </div>
-            <div>
-              <Link exact to="/shop">
-                <button>
-                  Ajouter au panier
-              </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        {data.map((dt) => (
 
-        <div className="product">
-          <img src={img2} alt="description" />
-          <div className="description-product">
-            <h3>New Era</h3>
-            <h4>29.99€</h4>
+          <div className="product" key={dt.id}>
+            <img src={img} alt="description" />
+            <div className="description-product">
+              <h3>{dt.name}</h3>
+              <h4>{dt.price}€</h4>
+            </div>
             <div className="order">
               <div>
                 <Link exact to="/article">
@@ -65,54 +45,9 @@ const News = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="product">
-          <img src={img1} alt="description" />
-          <div className="description-product">
-            <h3>New Era</h3>
-            <h4>29.99€</h4>
-            <div className="order">
-              <div>
-                <Link exact to="/article">
-                  <button>
-                    Voir le produit
-              </button>
-                </Link>
-              </div>
-              <div>
-                <Link exact to="/shop">
-                  <button>
-                    Ajouter au panier
-              </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="product">
-          <img src={img3} alt="description" />
-          <div className="description-product">
-            <h3>New Era</h3>
-            <h4>29.99€</h4>
-            <div className="order">
-              <div>
-                <Link exact to="/article">
-                  <button>
-                    Voir le produit
-              </button>
-                </Link>
-              </div>
-              <div>
-                <Link exact to="/shop">
-                  <button>
-                    Ajouter au panier
-              </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
+
       </div>
     </div>
   );

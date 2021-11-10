@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faChevronRight, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-import img from './pc.jpg';
+import img from './pc.png';
 
 // == Import des composants
 import Header from '../Header';

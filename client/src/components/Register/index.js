@@ -20,6 +20,7 @@ const Register = () => {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   // requête vers le back pour créer un nouvelle utilisateur en base de donnée
   const formSubmit = (event) => {
@@ -31,6 +32,10 @@ const Register = () => {
       password
     }).then( (response) => {
       console.log(response)
+      if (response.data.bodyErrors) {
+        setError(response.data.bodyErrors[0]);
+        return;
+      }
       history.push('/login');
     })
     .catch( error => console.log(error))
@@ -44,6 +49,7 @@ const Register = () => {
 
                 <div className="form">
                     <h2>S'inscrire</h2>
+                    <p>{error}</p>
                     <form method="post" onSubmit={formSubmit}>
                         <div className="input">
                             <label htmlFor="firstname">Prénom</label>

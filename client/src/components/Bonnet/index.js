@@ -1,8 +1,9 @@
 // == Import des librairies
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import img from './pc.png'
+import axios from 'axios';
 
 // == Import des Composants
 import Header from '../Header';
@@ -14,6 +15,18 @@ import './bonnet.scss';
 
 // == Composant
 const Bonnet = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/products/2/category')
+      .then((response) => {
+        setData(response.data)
+      }).catch((error) => {
+        console.log(error)
+      });
+    }, []);
+
     return (
         <div className="container-bonnet">
             <Header />
@@ -36,7 +49,7 @@ const Bonnet = () => {
 
                 </div>
             </div>
-            <News />
+            <News data={data}/>
             <Footer />
         </div>
     );

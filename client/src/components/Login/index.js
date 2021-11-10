@@ -17,6 +17,7 @@ const Login = () => {
   // states pour récupérer la data du formulaire
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const formSubmit = (event) => {
     event.preventDefault();
@@ -25,7 +26,11 @@ const Login = () => {
       password
     }).then( (response) => {
       console.log(response)
-      localStorage.setItem("token", response.data);
+      if (!response.data.token) {
+        setError(response.data.error);
+        return;
+      }
+      localStorage.setItem("token", response.data.token);
       history.push('/');
     })
     .catch( error => console.log(error))
@@ -39,6 +44,7 @@ const Login = () => {
 
         <div className="form">
           <h2>Connexion</h2>
+          <p>{error}</p>
           <form method="post" onSubmit={formSubmit}>
             <div className="input">
               <label htmlFor="name">Email</label>
