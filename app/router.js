@@ -30,6 +30,7 @@ router.delete('/api/product/:id', productController.deleteProduct);
  * routes des orders
  */
 router.get('/api/orders', orderController.getAllOrder);
+router.post('/api/orders', orderController.createOrder);
 
 
 

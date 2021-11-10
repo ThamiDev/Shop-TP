@@ -1,4 +1,4 @@
-const { Order } = require('../models');
+const { Order, User, Product } = require('../models');
 
 const orderController = {
 
@@ -6,8 +6,9 @@ const orderController = {
         try {
             const orders = await Order.findAll({
                 order: [
-                    ["order", "ASC"],
+                    "created_at"
                 ],
+                include: "product"
             });
             if (!orders) {
                 res.json("can't find products");
@@ -45,6 +46,29 @@ const orderController = {
                 await order.destroy();
                 res.json("order well destroyed");
             }
+        } catch (error) {
+            console.trace(error);
+            res.status(500).json(error.toString());
+        }
+    },
+    createOrder: async (req, res) => {
+        try {
+            const { status, user_id, product_id } = req.body;
+
+            const newOrder = await Order.build({
+                status
+            });
+
+            const user = await User.findByPk(user_id);
+            newOrder.setUser(user);
+
+            console.log(user);
+            
+            await newOrder.save();
+            await newOrder.addProduct(product_id);
+
+            res.json(newOrder);
+
         } catch (error) {
             console.trace(error);
             res.status(500).json(error.toString());
