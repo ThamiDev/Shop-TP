@@ -49,21 +49,21 @@ const News = () => {
             <h3>New Era</h3>
             <h4>29.99€</h4>
             <div className="order">
-            <div>
-              <Link exact to="/article">
-                <button>
-                  Voir le produit
+              <div>
+                <Link exact to="/article">
+                  <button>
+                    Voir le produit
               </button>
-              </Link>
-            </div>
-            <div>
-              <Link exact to="/shop">
-                <button>
-                  Ajouter au panier
+                </Link>
+              </div>
+              <div>
+                <Link exact to="/shop">
+                  <button>
+                    Ajouter au panier
               </button>
-              </Link>
+                </Link>
+              </div>
             </div>
-          </div>
           </div>
         </div>
 
@@ -73,21 +73,21 @@ const News = () => {
             <h3>New Era</h3>
             <h4>29.99€</h4>
             <div className="order">
-            <div>
-              <Link exact to="/article">
-                <button>
-                  Voir le produit
+              <div>
+                <Link exact to="/article">
+                  <button>
+                    Voir le produit
               </button>
-              </Link>
-            </div>
-            <div>
-              <Link exact to="/shop">
-                <button>
-                  Ajouter au panier
+                </Link>
+              </div>
+              <div>
+                <Link exact to="/shop">
+                  <button>
+                    Ajouter au panier
               </button>
-              </Link>
+                </Link>
+              </div>
             </div>
-          </div>
           </div>
         </div>
         <div className="product">
@@ -96,24 +96,23 @@ const News = () => {
             <h3>New Era</h3>
             <h4>29.99€</h4>
             <div className="order">
-            <div>
-              <Link exact to="/article">
-                <button>
-                  Voir le produit
+              <div>
+                <Link exact to="/article">
+                  <button>
+                    Voir le produit
               </button>
-              </Link>
-            </div>
-            <div>
-              <Link exact to="/shop">
-                <button>
-                  Ajouter au panier
+                </Link>
+              </div>
+              <div>
+                <Link exact to="/shop">
+                  <button>
+                    Ajouter au panier
               </button>
-              </Link>
+                </Link>
+              </div>
             </div>
-          </div>
           </div>
         </div>
-
       </div>
     </div>
   );

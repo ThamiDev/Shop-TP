@@ -59,3 +59,37 @@
         }
     }
 }
+@media screen and (max-width: 950px) {
+  .container-bonnet {
+    .bonnet-header {
+      .left-header {
+        width: 0%;
+        display: none;
+      }
+
+      .right-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-bonnet {
+    .bonnet-header {
+      .right-header {
+        .text-right-container {
+          h1 {
+            font-size: 25px;
+          }
+
+          p {
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,31 @@
 footer {
-    height: 90px;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #e8f0f1;
+  font-size: 15px;
+
+  h3 {
+    margin: 0 1em;
+  }
+}
+
+@media screen and (max-width:500px) {
+  footer {
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     // background-color: #e8f0f1;
     font-size: 15px;
 
     h3 {
-        margin: 0 1em;
+      margin: 0 0.5em;
     }
+  }
+
 }
