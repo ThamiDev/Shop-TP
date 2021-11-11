@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faShoppingBag, faBars, faCog, faBan, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 
 // == Import du style
 import './header.scss';
@@ -70,11 +71,17 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="items-header">
+        {token && jwt_decode(token).user.role == "1"
+          ? (
           <div className="item">
             <NavLink exact to="/admin">
               <FontAwesomeIcon icon={faCog} className="icon-item" />
             </NavLink>
           </div>
+          ) : (
+            <div className="item"></div>
+          )
+        }
           <div className="item">
             <NavLink exact to="/shop">
               <FontAwesomeIcon icon={faShoppingBag} className="icon-item" />

@@ -106,6 +106,29 @@ const userController = {
     logout: async (req, res) => {
         res.cookie('jwt', '', { maxAge: 1});
         res.status(200).json("logout success");
+    },
+    modifyUser: async (req, res) => {
+        try {
+            const userId = req.params.id;
+            const { firstname, lastname, email, password, role } = req.body;
+
+            const user = await User.findByPk(userId);
+            if (!user) {
+                return res.status(404).json("can't find the user with id: " + userId);
+            }
+
+            user.firstname = firstname ||user.firstname;
+            user.lastname = lastname || user.lastname;
+            user.email = email || user.email;
+            user.password = password || user.password;
+            user.role = role || user.role;
+            await user.save();
+            res.json(user);
+
+        } catch (error) {
+            console.trace(error);
+            res.status(500).json(error.toString());
+        }
     }
 
 };

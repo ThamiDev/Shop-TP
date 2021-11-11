@@ -1,6 +1,7 @@
 // == Import des librairies
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 
 // == Import du style
 import './styles.scss';
@@ -20,6 +21,23 @@ import Bob from '../Bob';
 // == Composant
 const App = () => { 
 
+  function checkAdmin() {
+    const token =  localStorage.getItem("token");
+
+    if(!token){
+      return(
+        <Redirect to="/" />
+      )
+    } else {
+      const dataToken = jwt_decode(token);
+      if (dataToken.user.role === "1"){
+        return(
+          <Admin />
+        )
+      }
+    }
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -32,7 +50,7 @@ const App = () => {
           <Route path="/article" exact component={Item} />
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
-          <Route path="/admin" exact component={Admin} />
+          <Route path="/admin" exact >{checkAdmin()}</Route>
           <Route path="/modify" exact component={Modify} />
         </Switch>
       </BrowserRouter>

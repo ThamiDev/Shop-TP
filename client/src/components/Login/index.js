@@ -32,6 +32,7 @@ const Login = () => {
       }
       localStorage.setItem("token", response.data.token);
       history.push('/');
+      window.location.reload();
     })
     .catch( error => console.log(error))
   }
@@ -52,7 +53,7 @@ const Login = () => {
             </div>
             <div className="input">
               <label htmlFor="password">Mot de Passe</label>
-              <input type="text" name="password" id="password" placeholder="entrez votre mot de passe" required onChange={(event) => {setPassword(event.target.value)}} />
+              <input type="password" name="password" id="password" placeholder="entrez votre mot de passe" required onChange={(event) => {setPassword(event.target.value)}} />
             </div>
             <div className="button">
               <input className="btn" type="submit" value="Connexion" />

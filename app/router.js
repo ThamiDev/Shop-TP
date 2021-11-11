@@ -15,6 +15,7 @@ router.get('/api/users', userController.getAllUsers);
 router.post('/api/register', userController.signUp);
 router.post('/api/login', userController.signIn);
 router.get('/api/logout', userController.logout);
+router.patch('/api/user/:id', userController.modifyUser);
 
 /**
  * routes des products
