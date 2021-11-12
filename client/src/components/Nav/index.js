@@ -44,7 +44,7 @@ const Nav = () => {
       <div className="middel-navigation">
         <ul>
           <li className="item">
-            <NavLink exact to="/" activeClassName="nav-active">
+            <NavLink to="/" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faHome} />
               </div>
@@ -52,7 +52,7 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/bonnet" activeClassName="nav-active">
+            <NavLink to="/bonnet" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faSocks} />
               </div>
@@ -60,7 +60,7 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/casquette" activeClassName="nav-active">
+            <NavLink to="/casquette" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faTshirt} />
               </div>
@@ -68,7 +68,7 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="item">
-            <NavLink exact to="/bob" activeClassName="nav-active">
+            <NavLink to="/bob" activeClassName="nav-active">
               <div className="icon-item">
                 <FontAwesomeIcon icon={faShoePrints} />
               </div>
@@ -82,7 +82,7 @@ const Nav = () => {
           <FontAwesomeIcon icon={faUser} />
           {!token
             ? (
-              <NavLink exact to="/login" activeClassName="nav-active">
+              <NavLink to="/login" activeClassName="nav-active">
                 <p>Profil</p>
               </NavLink>
             ) : (
@@ -95,12 +95,12 @@ const Nav = () => {
           </div>
           {!token
             ? (
-              <NavLink exact to="/login" >
+              <NavLink to="/login" >
                 <p>Connexion</p>
               </NavLink>
 
             ) : (
-              <NavLink exact to="/" onClick={Logout}>
+              <NavLink to="/" onClick={Logout}>
                 <p>Deconnexion</p>
               </NavLink>
             )}

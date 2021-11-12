@@ -13,15 +13,15 @@ const Home = () => {
 
   const [data, setData] = useState([]);
 
-useEffect(() => {
-  axios.get('http://localhost:3000/api/products/1/category')
-    .then((response) => {
-      setData(response.data)
-    }).catch((error) => {
-      console.log(error)
-    });
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/products/1/category')
+      .then((response) => {
+        setData(response.data)
+      }).catch((error) => {
+        console.log(error)
+      });
   }, []);
-    
+
 
   return (
     <div>

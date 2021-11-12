@@ -65,7 +65,7 @@ const Header = () => {
           <p>MENU</p>
         </div>
         <div className="logo-header">
-          <NavLink exact to="/">
+          <NavLink to="/">
             <h2>Mr.</h2>
             <h2>B<span>a</span>r<span>a</span></h2>
           </NavLink>
@@ -74,7 +74,7 @@ const Header = () => {
         {token && jwt_decode(token).user.role == "1"
           ? (
           <div className="item">
-            <NavLink exact to="/admin">
+            <NavLink to="/admin">
               <FontAwesomeIcon icon={faCog} className="icon-item" />
             </NavLink>
           </div>
@@ -83,7 +83,7 @@ const Header = () => {
           )
         }
           <div className="item">
-            <NavLink exact to="/shop">
+            <NavLink to="/shop">
               <FontAwesomeIcon icon={faShoppingBag} className="icon-item" />
               <div className="number-shop">
                 <p>0</p>
@@ -93,13 +93,13 @@ const Header = () => {
           {!token
             ? (
               <div className="item">
-                <NavLink exact to="/login">
+                <NavLink to="/login">
                   <FontAwesomeIcon icon={faUser} className="icon-item" />
                 </NavLink>
               </div>
             ) : (
               <div className="item">
-                <NavLink exact to="/" onClick={Logout}>
+                <NavLink to="/" onClick={Logout}>
                 <FontAwesomeIcon icon={faSignOutAlt} className="icon-item"/>
                 </NavLink>
               </div>
