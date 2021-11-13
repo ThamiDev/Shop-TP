@@ -50,7 +50,7 @@ const Header = () => {
       .then(() => {
       }
       ).catch(error => console.log(error))
-    localStorage.removeItem("token");
+    localStorage.clear();
     window.location.reload();
   }
   const token = localStorage.getItem("token");
@@ -71,17 +71,17 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="items-header">
-        {token && jwt_decode(token).user.role == "1"
-          ? (
-          <div className="item">
-            <NavLink to="/admin">
-              <FontAwesomeIcon icon={faCog} className="icon-item" />
-            </NavLink>
-          </div>
-          ) : (
-            <div className="item"></div>
-          )
-        }
+          {token && jwt_decode(token).user.role == "1"
+            ? (
+              <div className="item">
+                <NavLink to="/admin">
+                  <FontAwesomeIcon icon={faCog} className="icon-item" />
+                </NavLink>
+              </div>
+            ) : (
+              <div className="item"></div>
+            )
+          }
           <div className="item">
             <NavLink to="/shop">
               <FontAwesomeIcon icon={faShoppingBag} className="icon-item" />
@@ -100,7 +100,7 @@ const Header = () => {
             ) : (
               <div className="item">
                 <NavLink to="/" onClick={Logout}>
-                <FontAwesomeIcon icon={faSignOutAlt} className="icon-item"/>
+                  <FontAwesomeIcon icon={faSignOutAlt} className="icon-item" />
                 </NavLink>
               </div>
             )}

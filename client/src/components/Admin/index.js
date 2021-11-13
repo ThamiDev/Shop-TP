@@ -28,7 +28,7 @@ const Admin = () => {
       <div className="header">
         <h1>Administration</h1>
         <div className="logo-header">
-          <NavLink exact to="/" activeClassName="nav-active">
+          <NavLink to="/" activeClassName="nav-active">
             <h2>Mr.</h2>
             <h2>B<span>a</span>r<span>a</span></h2>
           </NavLink>
@@ -45,7 +45,7 @@ const Admin = () => {
 
             <div className="article" key={dt.id}>
               <img src={img} alt="image de l'article" />
-              <Link exact to="/modify" >
+              <Link to="/modify" >
                 <h4>{dt.name}</h4>
               </Link>
               <table>

@@ -13,23 +13,31 @@ import axios from 'axios';
 // == Composant
 const News = ({ data }) => {
 
-  // const [keyId, setKeyId] = useState(0);
-  // const [product, setproduct] = useState([]);
+  async function addProductShop(id) {
 
-  //   function addProductShop() {
+    await axios.get(`http://localhost:3000/api/product/${id}`)
+      .then((response) => {
+        console.log(response.data)
 
-  //     axios.get(`http://localhost:3000/api/product/${keyId}`)
-  //       .then((response) => {
-  //         setproduct(response.data)
-  //       }).catch((error) => {
-  //         console.log(error)
-  //       });
-  //     console.log(product);
+        let keyPorductLocalStorage = JSON.parse(localStorage.getItem("produit"));
 
-  //     localStorage.setItem("product", JSON.stringify(product))
-  //   };
+        if(keyPorductLocalStorage){
+          keyPorductLocalStorage = JSON.parse(localStorage.getItem("produit"));
+          keyPorductLocalStorage.push(response.data);
+          localStorage.setItem("produit", JSON.stringify(keyPorductLocalStorage));
+        }
+        else {
+          keyPorductLocalStorage = [];
+          keyPorductLocalStorage.push(response.data);
+          localStorage.setItem("produit", JSON.stringify(keyPorductLocalStorage));
+        }
 
-  console.log(data)
+      }).catch((error) => {
+        console.log(error)
+      });
+
+  };
+
 
   return (
     <div className="container-news">
@@ -41,7 +49,7 @@ const News = ({ data }) => {
 
         {data.map((dt) => (
 
-    
+
           <div className="product" key={dt.id}>
             <img src={img} alt="description" />
             <div className="description-product">
@@ -58,7 +66,10 @@ const News = ({ data }) => {
               </div>
               <div>
                 <Link to="/shop">
-                  <button>
+                  <button onClick={() => {
+                    addProductShop(dt.id)
+
+                  }}>
                     Ajouter au panier
               </button>
                 </Link>
