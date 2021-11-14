@@ -31,6 +31,7 @@ const News = ({ data }) => {
           keyPorductLocalStorage.push(response.data);
           localStorage.setItem("produit", JSON.stringify(keyPorductLocalStorage));
         }
+        window.location.reload();
 
       }).catch((error) => {
         console.log(error)

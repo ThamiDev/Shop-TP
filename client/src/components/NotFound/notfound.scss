@@ -1,0 +1,21 @@
+.notfound {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .btn-back {
+    margin-top: 1em;
+    display: flex;
+    p {
+      margin-right: 1em;
+    }
+  }
+}
