@@ -1,5 +1,5 @@
 // == Import des librairies
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -13,13 +13,27 @@ import Footer from '../Footer';
 // == Composant
 const Shop = () => {
 
+  const [price, setPrice] = useState(0);
+
   let keyPorductLocalStorage = JSON.parse(localStorage.getItem("produit"));
-  console.log(keyPorductLocalStorage);
 
   function removeShop() {
     localStorage.removeItem("produit");
     window.location.reload();
   }
+
+  useEffect(() => {
+    if (keyPorductLocalStorage) {
+
+      let totalPriceShop = [];
+      for (let i = 0; i < keyPorductLocalStorage.length; i++) {
+        let priceProduct = keyPorductLocalStorage[i].price;
+        totalPriceShop.push(priceProduct);
+      };
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      setPrice(totalPriceShop.reduce(reducer));
+    }
+  }, []);
 
   return (
     <div>
@@ -60,7 +74,7 @@ const Shop = () => {
           </tbody>
         </table>
         <div className="total">
-          <h2>TOTAL (Prix avec Taxe) <span>0.00€</span></h2>
+          <h2>TOTAL (Prix avec Taxe) <span>{price}.00€</span></h2>
         </div>
         <div className="valid">
           <Link to="/">

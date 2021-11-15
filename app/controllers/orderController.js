@@ -55,16 +55,15 @@ const orderController = {
         try {
             const { status, user_id, product_id } = req.body;
 
-            const newOrder = await Order.build({
-                status
+            const user = await User.findByPk(user_id);
+
+            const newOrder = await Order.create({
+                status,
+                user_id
             });
 
-            const user = await User.findByPk(user_id);
-            newOrder.setUser(user);
-
-            console.log(user);
+            await newOrder.setUser(user);
             
-            await newOrder.save();
             await newOrder.addProduct(product_id);
 
             res.json(newOrder);

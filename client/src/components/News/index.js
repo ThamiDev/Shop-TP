@@ -55,7 +55,7 @@ const News = ({ data }) => {
             <img src={img} alt="description" />
             <div className="description-product">
               <h3>{dt.name}</h3>
-              <h4>{dt.price}€</h4>
+              <h4>{dt.price}.00€</h4>
             </div>
             <div className="order">
               <div>
