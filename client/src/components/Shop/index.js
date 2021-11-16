@@ -22,6 +22,7 @@ const Shop = () => {
     window.location.reload();
   }
 
+
   useEffect(() => {
     if (keyPorductLocalStorage) {
 
@@ -30,10 +31,10 @@ const Shop = () => {
         let priceProduct = keyPorductLocalStorage[i].price;
         totalPriceShop.push(priceProduct);
       };
-      setPrice(totalPriceShop.filter(x => x > 0)         // removes all elements
-        .reduce((x, y) => x + y, 0))// the initial value is the neutral element of the addition);
+      setPrice(totalPriceShop.filter(x => x > 0)
+        .reduce((x, y) => x + y, 0))
     }
-  }, []);
+  }, [price]);
 
   return (
     <div>
@@ -63,6 +64,7 @@ const Shop = () => {
                       keyPorductLocalStorage = keyPorductLocalStorage.filter(
                         (el) => el.id !== product.id
                       )
+                      console.log(product.id)
                       localStorage.setItem("produit", JSON.stringify(keyPorductLocalStorage));
                       window.location.reload();
                     }} /></td>

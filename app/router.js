@@ -31,7 +31,10 @@ router.delete('/api/product/:id', productController.deleteProduct);
  * routes des orders
  */
 router.get('/api/orders', orderController.getAllOrder);
+router.get('/api/orders/:id/status', orderController.getAllOrderForStatus);
+router.get('/api/orders/:id/user', orderController.getAllOrdersForUser);
 router.post('/api/orders', orderController.createOrder);
+router.patch('/api/order/:id', orderController.modifyOrder);
 
 
 
