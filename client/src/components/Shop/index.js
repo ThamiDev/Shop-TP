@@ -30,8 +30,8 @@ const Shop = () => {
         let priceProduct = keyPorductLocalStorage[i].price;
         totalPriceShop.push(priceProduct);
       };
-      const reducer = (accumulator, currentValue) => accumulator + currentValue;
-      setPrice(totalPriceShop.reduce(reducer));
+      setPrice(totalPriceShop.filter(x => x > 0)         // removes all elements
+        .reduce((x, y) => x + y, 0))// the initial value is the neutral element of the addition);
     }
   }, []);
 
