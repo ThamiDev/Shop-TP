@@ -28,6 +28,10 @@ const orderController = {
                 where: {
                     status: status
                 },
+                order: [
+                    "created_at"
+                ],
+                include: "product"
             });
             if (!orders) {
                 res.json("can't find orders");
@@ -95,6 +99,20 @@ const orderController = {
     createOrder: async (req, res) => {
         try {
             const { status, user_id, product_id } = req.body;
+
+            const bodyErrors = [];
+            if (!status) {
+                bodyErrors.push("status can't be empty");
+            }
+            if (!user_id) {
+                bodyErrors.push("User id can't be empty");
+            }
+            if (!product_id) {
+                bodyErrors.push("Product id can't be empty");
+            }
+            if (bodyErrors.length) {
+                return res.json(bodyErrors).status(400);
+            }
 
             const user = await User.findByPk(user_id);
 

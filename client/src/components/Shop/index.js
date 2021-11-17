@@ -1,8 +1,9 @@
 // == Import des librairies
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import jwt_decode from 'jwt-decode';
 
 // == Import du style
 import './shop.scss';
@@ -10,8 +11,11 @@ import './shop.scss';
 // == Import des Composants
 import Header from '../Header';
 import Footer from '../Footer';
+import axios from 'axios';
 // == Composant
 const Shop = () => {
+
+  const history = useHistory();
 
   const [price, setPrice] = useState(0);
 
@@ -35,6 +39,18 @@ const Shop = () => {
         .reduce((x, y) => x + y, 0))
     }
   }, [price]);
+
+  function createOrder() {
+    axios.post('http://localhost:3000/api/orders', {
+      status: "0",
+      user_id: jwt_decode(localStorage.getItem("token")).user.id,
+      product_id: keyPorductLocalStorage.map(prd => prd.id)
+    }).then((response) => {
+      console.log(response);
+      history.push('/');
+    })
+      .catch(error => console.log(error))
+  }
 
   return (
     <div>
@@ -82,7 +98,7 @@ const Shop = () => {
           <Link to="/">
             <h2 className="close" onClick={removeShop}>FERMER <FontAwesomeIcon icon={faTimes} className="icon-item" /></h2>
           </Link>
-          <h2><span>VALIDER VOTRE PANIER</span></h2>
+          <h2><span onClick={createOrder}>VALIDER VOTRE PANIER</span></h2>
         </div>
       </div>
     </div>

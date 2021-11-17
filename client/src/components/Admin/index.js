@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Header';
 import { NavLink, Link } from 'react-router-dom';
 import Creation from './creation';
+import Commande from './commande';
 import axios from 'axios';
 
 // == Import du style
@@ -66,30 +67,10 @@ const Admin = () => {
         </div>
       </div>
 
-      <div className="commandes">
-        <h3>Les commandes</h3>
-
-        <div className="etat-commande">
-          <div className="all">
-            <p>Toutes</p>
-          </div>
-          <div className="en-cours">
-            <p>En cours</p>
-          </div>
-        </div>
-        <div className="container-commande">
-
-          {Array(9).fill(1).map((el, i) =>
-            <div className="commande">
-              <h2>Status : En Attente</h2>
-              <p>N° : AIF53NDSCN5218LPON</p>
-              <p>Total : 58€</p>
-            </div>
-          )}
-        </div>
-      </div>
+      <Commande />
 
       <Creation />
+      
     </div>
   );
 };
