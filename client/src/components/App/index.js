@@ -18,6 +18,7 @@ import Casquette from '../Casquette';
 import Bonnet from '../Bonnet';
 import Bob from '../Bob';
 import NotFound from '../NotFound';
+import Profil from '../Profil';
 
 // == Composant
 const App = () => {
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/register" exact component={Register} />
           <Route path="/admin" exact >{checkAdmin()}</Route>
           <Route path="/modify" exact component={Modify} />
+          <Route path="/profil" exact component={Profil} />
           <Route component={NotFound} status={404}/>
         </Switch>
       </BrowserRouter>

@@ -47,7 +47,7 @@ const Shop = () => {
       product_id: keyPorductLocalStorage.map(prd => prd.id)
     }).then((response) => {
       console.log(response);
-      history.push('/');
+      history.push('/profil');
     })
       .catch(error => console.log(error))
   }

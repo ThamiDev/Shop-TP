@@ -52,6 +52,10 @@ const orderController = {
                 where: {
                     user_id: user_id
                 },
+                order: [
+                    "created_at"
+                ],
+                include: "product"
             });
             if (!orders) {
                 res.json("can't find orders");
