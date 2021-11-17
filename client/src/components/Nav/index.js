@@ -86,7 +86,9 @@ const Nav = () => {
                 <p>Profil</p>
               </NavLink>
             ) : (
-              <p>{jwt_decode(localStorage.getItem("token")).user.firstname} {jwt_decode(localStorage.getItem("token")).user.lastname}</p>
+              <NavLink to="/profil" activeClassName="nav-active">
+                <p>{jwt_decode(localStorage.getItem("token")).user.firstname} {jwt_decode(localStorage.getItem("token")).user.lastname}</p>
+              </NavLink>
             )}
         </div>
         <div className="deconnexion">

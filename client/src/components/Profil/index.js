@@ -36,7 +36,13 @@ const Profil = () => {
 
           {data.map((dt) => (
             <div className="order" key={dt.id}>
-              <h2>Status : {dt.status}</h2>
+              {dt.status === "0"
+                ? (
+                  <h2>Status de la commande: en cours</h2>
+                ) : (
+                  <h2>Status de la commande: effectué</h2>
+                )
+              }
               <div className="prd-order">
 
                 {dt.product.map(prd => <p key={prd.id}>{prd.name}</p>)}
