@@ -17,21 +17,26 @@ const Commande = () => {
     axios.get('http://localhost:3000/api/orders')
       .then((response) => {
         setData(response.data)
+        console.log(document.querySelectorAll(".valid-status"))
+        document.querySelector(".valid-status").style.display = "none";
       }).catch((error) => {
         console.log(error)
       });
-  }
+      }
 
   function allOrderInProgress() {
     axios.get('http://localhost:3000/api/orders/0/status')
       .then((response) => {
         setData(response.data)
+        document.querySelectorAll(".valid-status").style.display = "block";
       }).catch((error) => {
         console.log(error)
       });
+    
   }
 
   function orderValid(id) {
+    console.log(id)
     axios.patch(`http://localhost:3000/api/order/${id}`, {
       "status": "1",
     }).then((response) => {
@@ -59,10 +64,10 @@ const Commande = () => {
             <h2>Status : {dt.status}</h2>
             <div className="prd-order">
 
-            {dt.product.map(prd => <p key={prd.id}>{prd.name}</p>)}
+              {dt.product.map(prd => <p key={prd.id}>{prd.name}</p>)}
             </div>
             <h3>Réf: MRBARA00{dt.id}-{dt.user_id}</h3>
-            <p onClick={orderValid(dt.id)}>valid</p>
+            <p className="valid-status" onClick={() => (orderValid(dt.id))}>valid</p>
           </div>
         ))}
       </div>
