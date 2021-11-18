@@ -59,7 +59,7 @@ const News = ({ data }) => {
             </div>
             <div className="order">
               <div>
-                <Link to="/article">
+                <Link to={`/article/${dt.id}`}>
                   <button>
                     Voir le produit
               </button>

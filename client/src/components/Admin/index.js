@@ -46,7 +46,7 @@ const Admin = () => {
 
             <div className="article" key={dt.id}>
               <img src={img} alt="image de l'article" />
-              <Link to="/modify" >
+              <Link to={`/modify/${dt.id}`}>
                 <h4>{dt.name}</h4>
               </Link>
               <table>

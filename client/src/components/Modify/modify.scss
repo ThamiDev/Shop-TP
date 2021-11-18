@@ -61,10 +61,10 @@
                 height: auto;
                 width: 100%;
                 display: flex;
-                justify-content: center;
-                // margin-top: 1em;
-                .btn-input {
-                    width: 30%;
+                justify-content: space-around;
+                margin-top: 1em;
+                .btn-input-enregistrer {
+                    width: 35%;
                     background-color: #35429e;
                     color: white;
                     display: flex;
@@ -76,6 +76,19 @@
                     padding: 0.7em 0;
                     border: none;
                 }
+                .btn-input-delete {
+                  width: 35%;
+                  background-color: #900c3e;
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 3px;
+                  font-size: 14px;
+                  font-weight: 700;
+                  padding: 0.7em 0;
+                  border: none;
+              }
             }
 
             .sizes-input {
@@ -116,6 +129,22 @@
       gap: 1.50rem;
       padding: 0;
 
+      form{
+        input {
+          width: 80%;
+        }
+        .button-submit{
+          display: flex;
+          flex-wrap: wrap;
+          .btn-input-enregistrer{
+            width: 90%;
+          }
+          .btn-input-delete{
+            width: 90%;
+          }
+        }
+      }
+
       p{
         text-align: center;
       }
@@ -134,7 +163,12 @@
           width: 80%;
         }
         .button-submit{
-          .btn-input{
+          display: flex;
+          flex-wrap: wrap;
+          .btn-input-enregistrer{
+            width: 100%;
+          }
+          .btn-input-delete{
             width: 100%;
           }
         }

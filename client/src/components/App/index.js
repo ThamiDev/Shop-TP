@@ -63,11 +63,11 @@ const App = () => {
           <Route path="/bonnet" exact component={Bonnet} />
           <Route path="/bob" exact component={Bob} />
           <Route path="/shop" exact >{checkUser()}</Route>
-          <Route path="/article" exact component={Item} />
+          <Route path="/article/:id" exact component={Item} />
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/admin" exact >{checkAdmin()}</Route>
-          <Route path="/modify" exact component={Modify} />
+          <Route path="/modify/:id" exact component={Modify} />
           <Route path="/profil" exact component={Profil} />
           <Route component={NotFound} status={404}/>
         </Switch>

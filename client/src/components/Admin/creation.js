@@ -16,7 +16,6 @@ const Creation = () => {
   const [category_id, setCategory_id] = useState("");
 
   const formSubmit = (event) => {
-    event.preventDefault();
     axios.post('http://localhost:3000/api/product', {
       name,
       description,
