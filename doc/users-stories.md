@@ -1,4 +1,4 @@
-# Userstories
+# User stories
 
 ## Visiteur
 
