@@ -1,9 +1,9 @@
 # User stories
 
-## Visiteur
+## Visiteur (utilisateur non connecté)
 
 ### Page d'accueil
-|En tant que|Je veux pouvoir|Afin de|
+|En tant que...|Je veux..|Afin de..|
 |---|---|---|
 |Visiteur|Visualiser la page d'accueil|Comprendre le fonctionnement du site|
 |Visiteur|Naviguer à travers le site via une naviguation|Naviguer sur le site|
