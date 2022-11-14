@@ -6,13 +6,13 @@
 |En tant que...|Je veux..|Afin de..|
 |---|---|---|
 |Visiteur|Visualiser la page d'accueil|Comprendre le fonctionnement du site|
-|Visiteur|Naviguer à travers le site via une naviguation|Naviguer sur le site|
-|Visiteur|Visualiser la nouvelle collection mise en avant|VIsualiser une collection|
-|Visiteur|Visualiser les derniers articles disponibles sur le site|Visualiser les derniers articles|
+|Visiteur|Naviguer simplement à travers le site|Une navigation claire et pédagogique|
+|Visiteur|Visualiser une collection particulière|Simplier ma recherche d'un article|
+|Visiteur|Visualiser les derniers articles disponibles sur le site|Visualiser les derniers articles mis en avant|
 |Visiteur|Accéder à la page d'inscription/connexion|Pouvoir s'inscrire/se connecter|
-|Visiteur|Accéder à la page de mon panier|Pouvoir visualiser mon panier|
-|Visiteur|Accéder aux détails d'un article mis en avant|En apprendre plus sur cet article|
-|Visiteur|Contacter les développeurs du site|Remonter différents bugs possibles|
+|Visiteur|Accéder à la page de mon panier|Pouvoir visualiser mon panier et finaliser un achat|
+|Visiteur|Accéder aux détails d'un article|En apprendre plus sur la fiche détaillé du produit|
+|Visiteur|Contacter les développeurs du site|Remonter différents avis ou problèmes|
 |Visiteur|Accèder au repot github mis à disposition|Connâitre le code source du site|
 |Visiteur|Accéder aux mentions légales du site|Connaître les mentions légales|
 
