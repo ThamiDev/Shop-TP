@@ -49,11 +49,5 @@ CREATE TABLE "order_has_product" (
     PRIMARY KEY("product_id", "order_id")
 );
 
-/* seeding */
-INSERT INTO "category" ("name") 
-VALUES ('nba');
-
-INSERT INTO "product" ("name", "description", "picture", "price", "amount", "category_id") VALUES ('Casquette nba', 'une jolie casquette de nba', 'casquette-nba.png', 30, 10, 1);
-
 /* fin de la transaction */
 COMMIT;
