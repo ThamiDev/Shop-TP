@@ -52,6 +52,20 @@ const Shop = () => {
   }
 
   return (
+    <header>
+      <Nav />
+      <div classname="header">
+        <div classname="menu-navigation"></div>
+        <div classname="logo-header"></div>
+        <div classname="items-header">
+    
+          <div classname="item"></div>
+          <div classname="item"></div>
+          <div classname="item"></div>
+    
+        </div>
+      </div>
+    </header>
     <div>
       <Header />
       <div className="shop">
