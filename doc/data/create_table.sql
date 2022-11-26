@@ -49,13 +49,6 @@ CREATE TABLE "order_has_product" (
     PRIMARY KEY("product_id", "order_id")
 );
 
-USER(id, firstname, lastname, email, password, role)
-ORDER(id, status, user_id)
-CATEGORY(id, name)
-PRODUCT(id, name, description, picture, price, amount,
-       category_id)
-ORDER_HAS_PRODUCT(#ORDER(id), #PRODUCT(id))
-
 /* seeding */
 INSERT INTO "category" ("name") 
 VALUES ('nba');
