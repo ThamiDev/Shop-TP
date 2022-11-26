@@ -21,12 +21,6 @@ const Shop = () => {
 
   let keyPorductLocalStorage = JSON.parse(localStorage.getItem("produit"));
 
-  function removeShop() {
-    localStorage.removeItem("produit");
-    window.location.reload();
-  }
-
-
   useEffect(() => {
     if (keyPorductLocalStorage) {
 
@@ -39,6 +33,11 @@ const Shop = () => {
         .reduce((x, y) => x + y, 0))
     }
   }, [price]);
+  
+   function removeShop() {
+    localStorage.removeItem("produit");
+    window.location.reload();
+  }
 
   function createOrder() {
     axios.post('http://localhost:3000/api/orders', {
