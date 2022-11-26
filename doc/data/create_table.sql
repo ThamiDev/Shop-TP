@@ -15,6 +15,9 @@ CREATE TABLE "user" (
     "updated_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+/* fin de la transaction */
+COMMIT;
+
 CREATE TABLE "order" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "status" TEXT NOT NULL DEFAULT '',
