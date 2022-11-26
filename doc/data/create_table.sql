@@ -2,7 +2,7 @@
 BEGIN;
 
 /* suppression des tables existantes */
-DROP TABLE IF EXISTS "user", "order", "product", "category", "order_has_product";
+DROP TABLE IF EXISTS "user";
 
 CREATE TABLE "user" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
