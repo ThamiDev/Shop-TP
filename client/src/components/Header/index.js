@@ -13,6 +13,10 @@ import img from './pc.png';
 // == Import des Composants
 import Nav from '../Nav';
 
+.exports.getOneProduct = (name, callback) => {
+  database.query(`SELECT * FROM product WHERE name=$1, [name], callback`);
+}
+
 // == Composant
 const Header = () => {
 
